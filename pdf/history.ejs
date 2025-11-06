@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Summary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Comprehensive multilingual font support for ALL languages -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&family=Noto+Sans+Gujarati:wght@400;700&family=Noto+Sans+Gurmukhi:wght@400;700&family=Noto+Sans+Hebrew:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Kannada:wght@400;700&family=Noto+Sans+Khmer:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+Lao:wght@400;700&family=Noto+Sans+Malayalam:wght@400;700&family=Noto+Sans+Myanmar:wght@400;700&family=Noto+Sans+Oriya:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&family=Noto+Sans+Telugu:wght@400;700&family=Noto+Sans+Thai:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans Bengali',
+                   'Noto Sans Gujarati', 'Noto Sans Gurmukhi', 'Noto Sans Hebrew', 'Noto Sans JP',
+                   'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Lao',
+                   'Noto Sans Malayalam', 'Noto Sans Myanmar', 'Noto Sans Oriya', 'Noto Sans SC',
+                   'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai',
+                   'Noto Sans TC', 'Segoe UI', 'Arial Unicode MS', sans-serif;
+      margin: 30px;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .header h1 {
+      color: #007bff;
+      margin: 0;
+      font-size: 2.2em;
+    }
+    
+    .header .date {
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+    
+    .message { 
+      margin-bottom: 20px; 
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      border-left: 4px solid #007bff;
+    }
+    
+    .message:nth-child(even) {
+      background-color: #e9ecef;
+      border-left-color: #28a745;
+    }
+    
+    .sender { 
+      font-weight: bold; 
+      text-transform: capitalize; 
+      color: #007bff;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.1em;
+    }
+    
+    .content {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 1em;
+      line-height: 1.5;
+      font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans Bengali',
+                   'Noto Sans Gujarati', 'Noto Sans Gurmukhi', 'Noto Sans Hebrew', 'Noto Sans JP',
+                   'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Lao',
+                   'Noto Sans Malayalam', 'Noto Sans Myanmar', 'Noto Sans Oriya', 'Noto Sans SC',
+                   'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai',
+                   'Noto Sans TC', 'Segoe UI', 'Arial Unicode MS', sans-serif;
+    }
+    
+    .message-count {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    @media print {
+      body { margin: 15px; }
+      .message { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Chat Summary</h1>
+    <div class="date">Generated on <%= new Date().toLocaleString() %></div>
+  </div>
+  
+  <% if (messages && messages.length > 0) { %>
+    <% messages.forEach((msg, index) => { %>
+      <div class="message">
+        <span class="sender"><%= msg.sender %>:</span>
+        <div class="content"><%- msg.text
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#x27;') %></div>
+      </div>
+    <% }) %>
+    
+    <div class="message-count">
+      Total messages: <%= messages.length %>
+    </div>
+  <% } else { %>
+    <div class="message">
+      <div class="content">No messages found in chat history.</div>
+    </div>
+  <% } %>
+</body>
+</html>

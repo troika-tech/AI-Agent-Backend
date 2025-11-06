@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Weekly Chatbot Usage Report</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f9f9f9; }
+    h1 { text-align: center; color: #4F46E5; }
+    .section { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+    .label { font-weight: bold; color: #444; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Weekly Chatbot Usage Report</h1>
+
+  <div class="section">
+    <h2>🏢 Company Info</h2>
+    <p><span class="label">Company Name:</span> <%= companyName %></p>
+    <p><span class="label">Domain:</span> <%= domain %></p>
+  </div>
+
+  <div class="section">
+    <h2>📦 Plan Details</h2>
+    <p><span class="label">Plan Name:</span> <%= planName %></p>
+    <p><span class="label">Duration:</span> <%= planDuration %> days</p>
+    <p><span class="label">Plan Activated On:</span> <%= startDate %></p>
+    <p><span class="label">Expires On:</span> <%= endDate %></p>
+    <p><span class="label">Days Left:</span> <%= daysRemaining %></p>
+    <p><span class="label">Users Used:</span> <%= uniqueUsers %></p>
+    <p><span class="label">Users Left:</span> <%= remainingUsers %></p>
+  </div>
+
+  <div class="section">
+    <h2>💬 Message Details</h2>
+    <p><span class="label">Total Messages:</span> <%= totalMessages %></p>
+  </div>
+
+  <div class="section">
+    <h2>🧾 Recent Message History (<%= messageHistory.length %>)</h2>
+    <% if (messageHistory.length === 0) { %>
+      <p>No recent messages.</p>
+    <% } else { %>
+      <ul>
+        <% messageHistory.forEach(msg => { %>
+          <li><strong>[<%= msg.sender %>]</strong> - <%= msg.content %></li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </div>
+
+</body>
+</html> -->

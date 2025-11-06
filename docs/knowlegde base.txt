@@ -1,0 +1,208 @@
+Troika Tech - Chatbot Knowledge Base (Structured Schema)
+
+Company Overview
+
+-   Name: Troika Tech Services
+-   Founded: 2012, Thane
+-   Founders: Godwin Pinto, Parvati Matkate, Mawin Pinto
+-   Experience: 13+ years, 6,000+ clients, 47+ cities, 9+ countries
+-   Tagline: Not Just a Vendor. Your AI Growth Partner.
+-   Mission: Empower businesses with AI websites, smart tools, and
+    strategies that solve small problems and unlock big growth.
+-   Vision: Make AI simple, fast, and affordable — helping every brand
+    stay ahead in a world where milliseconds matter.
+
+------------------------------------------------------------------------
+
+Services (Atomic Chunks)
+
+AI Websites
+
+Definition: Smart, fast, SEO-enabled websites built in just 4 hours.
+Packages & Pricing: - Starter AI Website: ₹25,000 + GST (5 pages,
+lead-ready, mobile-friendly, SEO-enabled) - Corporate AI Website:
+₹50,000 + GST (10+ pages, analytics, industry designs) - Premium AI
+Website: ₹1,00,000 + GST (20+ pages, AI SEO, blogs, integrations) -
+Extra Pages: ₹3,000 + GST each Case Studies: - Real Estate Developer: 3×
+more inquiries - Education Institute: Inquiries doubled, staff saved 70%
+time - Pharma Distributor: 4× engagement, faster distributor onboarding
+AI Websites
+FEATURES: 1 Domain + Hosting, AI SEO (as per latest algorithm), AI Chatbot Integration, Responsive Design, Fast Load Speed, SSL, Analytics, CMS Access, Basic Automation.
+DELIVERY TIME: 24 to 72 hours or as per project scope.
+PLANS & PRICING: ₹25,000 for 5 pages + ₹3,000 per additional page + Supa Agent integration optional.
+DURATION: 1 Year
+RENEWAL: Domain + Hosting Renewal = ₹10,000 per year.
+FAQ:
+
+What is AI Websites? → A complete AI-powered business website by Troika Tech with SEO, hosting, chatbot, and automation.
+
+What is the price? → ₹25,000 for 5 pages + ₹3,000 per extra page.
+
+What is the delivery time? → 24 to 72 hours.
+
+Is there renewal? → ₹10,000 per year for hosting & domain.
+
+------------------------------------------------------------------------
+
+Supa Agent (AI Chat Assistant)
+
+Supa Agent
+FEATURES: AI Sales, Marketing & Customer Service Agent. 80+ Languages Supported. Omni-channel integration (Website, WhatsApp, Instagram, Email). Smart CRM + Automation.
+DELIVERY TIME: 24 to 72 hours or as per project.
+PLANS & PRICING: ₹40,000 setup + Monthly rental based on chats. starts with ₹5,000 for 5000 chat (1 chat = 1 message sent by user)
+DURATION: One-time development cost with monthly subscription.
+RENEWAL: Subscription-based.
+FAQ:
+
+What is Supa Agent? → AI Agent for Sales, Marketing & Support.
+
+What is the price? → ₹40,000 setup + monthly rental.
+
+What is the delivery time? → 24 to 72 hours.
+
+Is it subscription-based? → Yes.
+------------------------------------------------------------------------
+
+WhatsApp Marketing
+
+Definition: Verified, interactive WhatsApp campaigns with 98% open
+rates. Retail Price: 60 paisa/message (+18% GST) Offer: Double Dhamaka –
+Buy 1, Get 1 Free Plans: - 1 Lac + 1 Lac free = 2 Lac msgs → ₹70,800
+(incl. GST) - 2 Lac + 2 Lac free = 4 Lac msgs → ₹1,41,600 (incl. GST) - 4 Lac + 4 Lac
+free = 8 Lac msgs → ₹2,83,200 (incl. GST) - 5 Lac + 5 Lac free = 10 Lac msgs →
+₹3,54,000 (incl. GST)
+
+------------------------------------------------------------------------
+
+Video Agent
+FEATURES: AI-powered Video Agent for Customer Support, Sales Demos & Product Walkthroughs. Realistic avatars and multilingual capabilities.
+DELIVERY TIME: 24 to 72 hours or as per project.
+PLANS & PRICING: ₹1,00,000 including 1000 minutes + ₹25 per extra minute.
+DURATION: 1 Year (with subscription fees).
+RENEWAL: Subscription renewal based on usage.
+FAQ:
+
+What is Video Agent? → AI Avatar for video-based customer engagement.
+
+What is the price? → ₹1,00,000 + ₹25 per extra minute.
+
+Delivery time? → 24 to 72 hours.
+
+Renewal? → Based on subscription usage.
+
+----------------------------------------------------------------------------
+
+Calling Agent
+FEATURES: AI Call Assistance (Inbound + Outbound). Perfect for Lead Qualification, Customer Support, and Political Outreach. Real-time analytics dashboard.
+DELIVERY TIME: 24 to 72 hours or as per project.
+PLANS & PRICING: ₹45,000 design & deployment cost (includes 1 number + 1 script + 500 minutes). Monthly call and agent rental applicable.
+DURATION: One-time setup + Monthly subscription.
+RENEWAL: Number change or new number charges apply separately.
+FAQ:
+
+What is Calling Agent? → AI Voice Agent for calls & outreach.
+
+Price? → ₹45,000 initial setup + monthly usage fees.
+
+Delivery time? → 24 to 72 hours.
+
+Renewal? → New number or changes billed separately.
+
+
+---------------------------------------------------------------------------
+
+
+RCS Messaging
+FEATURES: Smart Rich Messages with Multimedia, CTA Buttons, Carousel, and Business Branding. Works with verified sender IDs.
+DELIVERY TIME: 7–10 working days (may vary based on verification).
+PLANS & PRICING: ₹25,000 setup + ₹10,000 per month for panel, maintenance, and support.
+DURATION: 1 Year
+RENEWAL: ₹25,000 per year for panel, maintenance & support renewal.
+FAQ:
+
+What is RCS Messaging? → Rich Communication Service for business messaging.
+
+What is the setup cost? → ₹25,000 + ₹10,000 monthly.
+
+Delivery time? → 7–10 working days.
+
+Renewal? → ₹25,000 per year.
+
+
+---------------------------------------------------------------------------
+
+
+SuperScan
+
+FEATURES: Convert & align thousands of visiting cards into a CSV (ready-to-use lead sheet) within seconds. Perfect for sales, marketing, and event data management.
+
+DELIVERY TIME: Immediate setup.
+
+PLANS & PRICING:
+
+₹5,000 signup with 1,000 card scans included
+
+Afterwards: ₹2,000 for 1,000 scans
+
+₹5,000 for 5,000 scans
+
+DURATION: 1 Year
+
+RENEWAL: Not applicable (pay-per-scan model).
+
+FAQ:
+
+What is SuperScan? → A smart tool that digitizes visiting cards instantly into a CSV lead sheet, saving hours of manual data entry.
+
+What is the setup time? → Immediate setup.
+
+What’s the price? → ₹5,000 for 1,000 scans; ₹2,000 for 1,000 scans thereafter; ₹5,000 for 5,000 scans.
+
+Is there a renewal fee? → No renewal cost; additional scans are pay-per-use.
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Contact (Atomic Chunk)
+
+-   Phone: +91 9821211755
+-   Email: info@troikatech.in
+-   Address: 702, B44, Sector 1, Shanti Nagar, Mira Road East,
+    Maharashtra 401107
+
+------------------------------------------------------------------------
+
+Industries Served
+
+-   Real Estate, Retail, E-commerce, Education, Fashion, Pharma,
+    Healthcare, Politics, NGOs
+
+------------------------------------------------------------------------
+
+Differentiators
+
+-   Simplicity Wins – No jargon, just growth
+-   Speed Matters – Websites in 4 hours
+-   AI + Human – Automation + strategy
+-   Future-Ready – AI + predictive analysis + ML
+
+------------------------------------------------------------------------
+
+Testimonials
+
+-   “Top WordPress Elementor experts in India. Clean, editable,
+    mobile-first.”
+-   “SEO-optimized architecture firm website, elegant and easy to
+    navigate.”
+-   “WhatsApp promotions boosted webinar attendance more than email or
+    social ads.”
+-   Agarbatti Manufacturer: More distributors via AI website + Supa
+    Agent (Gujarati/Hindi)
+-   Fintech Startup: 60% increase in signups
+-   Political Campaign: Massive voter engagement with RCS + WhatsApp +
+    Supa Agent
+
+------------------------------------------------------------------------
+
+

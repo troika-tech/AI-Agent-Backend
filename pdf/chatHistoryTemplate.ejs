@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Chat History PDF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 40px;
+      font-size: 13px;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #3a2d9c 0%, #017977 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 16px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(58, 45, 156, 0.15);
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+
+    .header .subtitle {
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.95;
+      font-weight: 500;
+    }
+
+    .meta-section {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .meta-header {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f3f4f6;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .meta-item {
+      background: #f9fafb;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border-left: 4px solid #3a2d9c;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      border: 1px solid #e5e7eb;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-badge {
+      background: linear-gradient(135deg, #3a2d9c 0%, #017977 100%);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .divider {
+      border: none;
+      border-top: 2px solid #e5e7eb;
+      margin: 32px 0;
+    }
+
+    .chat-section {
+      margin-bottom: 32px;
+    }
+
+    .chat-section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f3f4f6;
+    }
+
+    .chat-entry {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+
+    .chat-entry.user-message {
+      border-left: 4px solid #3a2d9c;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+    }
+
+    .chat-entry.bot-message {
+      border-left: 4px solid #017977;
+      background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+    }
+
+    .message-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .sender {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sender-badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sender-badge.user {
+      background: #3a2d9c;
+      color: white;
+    }
+
+    .sender-badge.bot {
+      background: #017977;
+      color: white;
+    }
+
+    .timestamp {
+      font-size: 11px;
+      color: #6b7280;
+      font-weight: 500;
+      background: #f3f4f6;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* Message content styles */
+    .message-content {
+      line-height: 1.6;
+      color: #374151;
+      font-size: 13px;
+    }
+
+    .message-content p {
+      margin: 0.5em 0;
+    }
+
+    .message-content p:first-child {
+      margin-top: 0;
+    }
+
+    .message-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .message-content strong {
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .message-content em {
+      font-style: italic;
+      color: #4b5563;
+    }
+
+    .message-content code {
+      background-color: #f3f4f6;
+      color: #ef4444;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 500;
+    }
+
+    .message-content pre {
+      background-color: #1f2937;
+      color: #f9fafb;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 12px 0;
+      border: 1px solid #374151;
+    }
+
+    .message-content pre code {
+      background-color: transparent;
+      color: #f9fafb;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    .message-content ul,
+    .message-content ol {
+      margin: 0.6em 0;
+      padding-left: 24px;
+    }
+
+    .message-content li {
+      margin: 0.3em 0;
+      line-height: 1.6;
+    }
+
+    .message-content a {
+      color: #3a2d9c;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .message-content h1,
+    .message-content h2,
+    .message-content h3,
+    .message-content h4,
+    .message-content h5,
+    .message-content h6 {
+      font-weight: 700;
+      margin: 1em 0 0.5em 0;
+      color: #111827;
+    }
+
+    .message-content h1 {
+      font-size: 18px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    .message-content h2 {
+      font-size: 16px;
+    }
+
+    .message-content h3 {
+      font-size: 15px;
+    }
+
+    .message-content h4,
+    .message-content h5,
+    .message-content h6 {
+      font-size: 14px;
+    }
+
+    .message-content blockquote {
+      border-left: 4px solid #3a2d9c;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-style: italic;
+      background: #f9fafb;
+      border-radius: 4px;
+      color: #4b5563;
+    }
+
+    .message-content table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 12px 0;
+      font-size: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .message-content th,
+    .message-content td {
+      border: 1px solid #e5e7eb;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .message-content th {
+      background: linear-gradient(135deg, #3a2d9c 0%, #017977 100%);
+      color: white;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .message-content tr:nth-child(even) {
+      background-color: #f9fafb;
+    }
+
+    .message-content hr {
+      border: none;
+      border-top: 2px solid #e5e7eb;
+      margin: 16px 0;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 40px;
+      color: #9ca3af;
+      font-size: 14px;
+      background: #f9fafb;
+      border-radius: 12px;
+      border: 2px dashed #e5e7eb;
+    }
+
+    .empty-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid #e5e7eb;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 12px;
+    }
+
+    .footer strong {
+      color: #3a2d9c;
+      font-weight: 700;
+    }
+
+    .generated-date {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1><%= title %></h1>
+    <div class="subtitle">Complete Conversation History Export</div>
+    <div class="generated-date">
+      📅 Generated on: <%= generatedOn %>
+    </div>
+  </div>
+
+  <!-- Company Information (if available) -->
+  <% if (company) { %>
+    <div class="meta-section">
+      <div class="meta-header">🏢 Company Information</div>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Company Name</div>
+          <div class="meta-value"><%= company.name %></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Email Address</div>
+          <div class="meta-value"><%= company.email %></div>
+        </div>
+        <div class="meta-item" style="grid-column: span 2;">
+          <div class="meta-label">Domain</div>
+          <div class="meta-value"><%= company.domain %></div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <!-- Contact Information -->
+  <%
+    const contactValue = (typeof user_email !== 'undefined' && user_email) ? user_email
+                       : (typeof user_phone !== 'undefined' && user_phone) ? user_phone
+                       : (typeof user_session !== 'undefined' && user_session) ? user_session
+                       : null;
+    const contactType = (typeof user_email !== 'undefined' && user_email) ? 'Email'
+                      : (typeof user_phone !== 'undefined' && user_phone) ? 'Phone'
+                      : (typeof user_session !== 'undefined' && user_session) ? 'Guest Session'
+                      : null;
+  %>
+
+  <% if (contactValue) { %>
+    <div class="contact-info">
+      <span class="contact-badge"><%= contactType %></span>
+      <span class="contact-value"><%= contactValue %></span>
+    </div>
+  <% } %>
+
+  <div class="divider"></div>
+
+  <!-- Chat Messages -->
+  <div class="chat-section">
+    <div class="chat-section-title">💬 Conversation Messages</div>
+
+    <% if (messages && messages.length) { %>
+      <% messages.forEach((msg, index) => { %>
+        <div class="chat-entry <%= msg.sender === 'user' ? 'user-message' : 'bot-message' %>">
+          <div class="message-header">
+            <div class="sender">
+              <span class="sender-badge <%= msg.sender === 'user' ? 'user' : 'bot' %>">
+                <%= msg.sender === 'user' ? '👤 USER' : '🤖 AGENT' %>
+              </span>
+            </div>
+            <div class="timestamp">
+              🕐 <%= new Date(msg.timestamp).toLocaleString() %>
+            </div>
+          </div>
+          <div class="message-content">
+            <%- msg.contentHtml || msg.content || '' %>
+          </div>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <div class="empty-state">
+        <div class="empty-icon">📭</div>
+        <p><strong>No messages found</strong></p>
+        <p>There are no messages available for this conversation.</p>
+      </div>
+    <% } %>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <strong>AI Agent</strong> - Chat History Export<br>
+    This conversation history is confidential and intended solely for authorized personnel.
+  </div>
+</body>
+</html>
